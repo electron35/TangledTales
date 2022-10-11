@@ -9,7 +9,7 @@ namespace Platformer.Gameplay
     /// <typeparam name="PlayerLanded"></typeparam>
     public class PlayerLanded : Simulation.Event<PlayerLanded>
     {
-        public PlayerController player;
+        public PlayerControllerBackup player;
 
         public override void Execute()
         {

@@ -12,7 +12,7 @@ namespace Platformer.Mechanics
     /// This is the main class used to implement control of the player.
     /// It is a superset of the AnimationController class, but is inlined to allow for any kind of customisation.
     /// </summary>
-    public class PlayerController : KinematicObject
+    public class PlayerControllerBackup : KinematicObject
     {
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;

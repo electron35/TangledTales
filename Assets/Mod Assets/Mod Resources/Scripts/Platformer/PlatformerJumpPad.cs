@@ -9,12 +9,12 @@ public class PlatformerJumpPad : MonoBehaviour
     {
         var rb = other.attachedRigidbody;
         if (rb == null) return;
-        var player = rb.GetComponent<PlayerController>();
+        var player = rb.GetComponent<PlayerControllerBackup>();
         if (player == null) return;
         AddVelocity(player);
     }
 
-    void AddVelocity(PlayerController player)
+    void AddVelocity(PlayerControllerBackup player)
     {
         player.velocity.y = verticalVelocity;
     }

@@ -12,12 +12,12 @@ public class PlatformerSpeedPad : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         var rb = other.attachedRigidbody;
         if (rb == null) return;
-        var player = rb.GetComponent<PlayerController>();
+        var player = rb.GetComponent<PlayerControllerBackup>();
         if (player == null) return;
         player.StartCoroutine(PlayerModifier(player, duration));
     }
 
-    IEnumerator PlayerModifier(PlayerController player, float lifetime){
+    IEnumerator PlayerModifier(PlayerControllerBackup player, float lifetime){
         var initialSpeed = player.maxSpeed;
         player.maxSpeed = maxSpeed;
         yield return new WaitForSeconds(lifetime);

@@ -9,7 +9,7 @@ namespace Platformer.Gameplay
     /// <typeparam name="PlayerStopJump"></typeparam>
     public class PlayerStopJump : Simulation.Event<PlayerStopJump>
     {
-        public PlayerController player;
+        public PlayerControllerBackup player;
 
         public override void Execute()
         {
