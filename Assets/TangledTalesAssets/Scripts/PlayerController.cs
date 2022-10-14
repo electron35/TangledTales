@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : PhysicsObject
 {
 
-    [Range(5, 15)]
+    [Range(0.1f, 15)]
     public float maxSpeed = 10;
-    public Vector2 move;
-    public Vector2 targetVelocity;
-    public Rigidbody2D body;
+
+    private Vector2 moveInput;
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
-        body = GetComponent<Rigidbody2D>();
-        body.isKinematic = true;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
@@ -27,19 +26,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        move.x = Input.GetAxis("Horizontal");
+        moveInput.x = Input.GetAxis("Horizontal");
+
+        if (moveInput.x > 0.01f)
+            spriteRenderer.flipX = false;
+        else if (moveInput.x < -0.01f)
+            spriteRenderer.flipX = true;
 
         ComputeVelocity();
     }
 
     void ComputeVelocity()
     {
-        targetVelocity = move * maxSpeed;
-    }
-
-    private void FixedUpdate()
-    {
-        body.position += targetVelocity / 100;    
+        targetVelocity = moveInput * maxSpeed;
     }
 
     public enum JumpState
