@@ -16,7 +16,7 @@ public class PlayerController : PhysicsObject
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
 
-    public GameController gameController;
+    public GameController gameController = null;
 
     void Awake()
     {
@@ -26,7 +26,7 @@ public class PlayerController : PhysicsObject
     // Start is called before the first frame update
     void Start()
     {
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
     }
 
     protected override void Update()
