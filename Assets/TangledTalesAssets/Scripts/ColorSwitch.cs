@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColorSwitch : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private bool colorSwitched = false;
+    public bool colorSwitched = false;
 
     void OnEnable()
     {
@@ -24,8 +24,8 @@ public class ColorSwitch : MonoBehaviour
 
     void SwitchColor()
     {
-        spriteRenderer.color = colorSwitched ? Color.blue : Color.white;
-
         colorSwitched = !colorSwitched;
+
+        spriteRenderer.color = colorSwitched ? Color.blue : Color.white;
     }
 }
