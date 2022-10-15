@@ -16,6 +16,8 @@ public class PlayerController : PhysicsObject
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
 
+    public GameController gameController;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,7 +26,18 @@ public class PlayerController : PhysicsObject
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    }
+
+    protected override void Update()
+    {
+        if (Input.GetKeyDown("e"))
+        {
+            gameController.fictionalMode = !gameController.fictionalMode;
+        }
+
+        targetVelocity = Vector2.zero;
+        ComputeVelocity();
     }
 
     protected override void ComputeVelocity()
