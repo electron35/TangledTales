@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColorSwitch : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    private new BoxCollider2D collider;
     public bool colorSwitched = false;
 
     void OnEnable()
@@ -20,12 +21,16 @@ public class ColorSwitch : MonoBehaviour
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<BoxCollider2D>();
     }
 
     void SwitchColor()
     {
         colorSwitched = !colorSwitched;
+        collider.enabled = !colorSwitched;
+        
 
-        spriteRenderer.color = colorSwitched ? Color.blue : Color.white;
+        // spriteRenderer.color = colorSwitched ? Color.blue : Color.white;
+        spriteRenderer.enabled = !colorSwitched;
     }
 }
