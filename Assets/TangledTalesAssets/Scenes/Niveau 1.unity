@@ -1249,6 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d37710841bef024eb3b3d3344a99afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentFictionalMode: 0
 --- !u!4 &646646189
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,7 +1393,7 @@ GameObject:
   - component: {fileID: 1128171011}
   - component: {fileID: 1128171010}
   m_Layer: 0
-  m_Name: RawImage
+  m_Name: Camera2Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1430,7 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98850524, g: 0.495283, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1766,7 +1767,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1843806786}
   - component: {fileID: 1843806785}
-  - component: {fileID: 1843806784}
   - component: {fileID: 1843806783}
   m_Layer: 0
   m_Name: Camera 2
@@ -1787,16 +1787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37df0bc943506824baa57d390d6068a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: -20, z: 0}
-  followObject: {fileID: 1246784498}
---- !u!81 &1843806784
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843806782}
-  m_Enabled: 1
+  offset: {x: 0, y: -20, z: -10}
+  objectToFollow: {fileID: 497531972}
 --- !u!20 &1843806785
 Camera:
   m_ObjectHideFlags: 0
@@ -1824,7 +1816,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2068,7 +2060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 1024
-  m_ScaleFactor: 1
+  m_ScaleFactor: 2
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -2089,7 +2081,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -2116,6 +2108,8 @@ GameObject:
   - component: {fileID: 2025756620}
   - component: {fileID: 2025756619}
   - component: {fileID: 2025756618}
+  - component: {fileID: 2025756621}
+  - component: {fileID: 2025756622}
   m_Layer: 0
   m_Name: Circle Mask
   m_TagString: Untagged
@@ -2141,7 +2135,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 900, y: 900}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025756618
 MonoBehaviour:
@@ -2169,7 +2163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
+  m_Color: {r: 1, g: 0, b: 0.7330103, a: 0.039215688}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2194,3 +2188,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025756616}
   m_CullTransparentMesh: 1
+--- !u!114 &2025756621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025756616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf9426d03f288e4db2c0907265f194b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 497531972}
+--- !u!114 &2025756622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025756616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8908077db212d4b8e1042e30f9d7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 0}
+  eventManager: {fileID: 0}
+  canvas: {fileID: 0}

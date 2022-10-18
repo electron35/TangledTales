@@ -5,11 +5,11 @@ using UnityEngine;
 public class FollowObjectPosition : MonoBehaviour
 {
     public Vector3 offset = new Vector3(0, -20, 0);
-    public GameObject followObject;
+    public GameObject objectToFollow;
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = followObject.transform.position + offset;
+        this.transform.position = objectToFollow.transform.position + offset;
     }
 }
