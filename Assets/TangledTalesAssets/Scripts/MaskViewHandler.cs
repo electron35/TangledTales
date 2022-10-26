@@ -33,6 +33,6 @@ public class MaskViewHandler : MonoBehaviour
     {
         Debug.Log("In fictional Mode : " + eventManager.currentFictionalMode);
         //this.transform.localScale = new Vector3(0, 0, 0);
-        rectTransform.sizeDelta = eventManager.currentFictionalMode ? new Vector2(400, 400) : new Vector2(0, 0);
+        rectTransform.sizeDelta = eventManager.currentFictionalMode ? new Vector2(600, 600) : new Vector2(0, 0);
     }
 }
