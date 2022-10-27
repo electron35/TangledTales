@@ -59,9 +59,9 @@ public class PlayerController : PhysicsObject
         }
 
         if (moveInput.x > 0.01f)
-            spriteRenderer.flipX = false;
-        else if (moveInput.x < -0.01f)
             spriteRenderer.flipX = true;
+        else if (moveInput.x < -0.01f)
+            spriteRenderer.flipX = false;
         
         targetVelocity = moveInput * maxSpeed;
     }
