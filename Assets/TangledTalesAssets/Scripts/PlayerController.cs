@@ -15,12 +15,14 @@ public class PlayerController : PhysicsObject
 
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     public GameController gameController = null;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -62,6 +64,9 @@ public class PlayerController : PhysicsObject
             spriteRenderer.flipX = true;
         else if (moveInput.x < -0.01f)
             spriteRenderer.flipX = false;
+
+        animator.SetBool("grounded", grounded);
+        animator.SetBool("moveInputX", (Input.GetButton("Horizontal")));
         
         targetVelocity = moveInput * maxSpeed;
     }
