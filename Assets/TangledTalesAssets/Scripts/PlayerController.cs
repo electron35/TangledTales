@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 
 
@@ -18,6 +21,11 @@ public class PlayerController : PhysicsObject
 
     public GameController gameController = null;
 
+    private float vertical;
+
+    bool isLadder = false;
+    bool isClimbing = false;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -31,12 +39,20 @@ public class PlayerController : PhysicsObject
 
     protected override void Update()
     {
+        vertical = Input.GetAxisRaw("Vertical");
+
         if (Input.GetKeyDown("e"))
         {
             gameController.fictionalMode = !gameController.fictionalMode;
         }
 
         targetVelocity = Vector2.zero;
+
+        if (isLadder && Mathf.Abs(vertical) > 0f)
+        {
+            isClimbing = true;
+        }
+        UnityEngine.Debug.Log("Enter");
         ComputeVelocity();
     }
 
@@ -62,8 +78,41 @@ public class PlayerController : PhysicsObject
             spriteRenderer.flipX = false;
         else if (moveInput.x < -0.01f)
             spriteRenderer.flipX = true;
-        
+
+
+        if (isClimbing)
+        {
+            gravityModifier = 0f;
+            velocity.y = vertical * maxSpeed;
+        }
+        else
+        {
+            gravityModifier = 1f;
+        }
+
+        UnityEngine.Debug.Log("IsClimbing=" + isClimbing);
+
+
         targetVelocity = moveInput * maxSpeed;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        UnityEngine.Debug.Log("Enter");
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = false;
+            isClimbing = false;
+        }
     }
 
     public enum JumpState
