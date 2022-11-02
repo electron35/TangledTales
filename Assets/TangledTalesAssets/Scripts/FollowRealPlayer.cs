@@ -17,6 +17,9 @@ public class FollowRealPlayer : MonoBehaviour
     void Update()
     {
         this.transform.position = realPlayer.transform.position + offset;
+
+        // Copy sprite properties from the real player
+        spriteRenderer.sprite = realPlayer.GetComponent<SpriteRenderer>().sprite;
         spriteRenderer.flipX = realPlayer.GetComponent<SpriteRenderer>().flipX;
     }
 }
