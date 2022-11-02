@@ -81,6 +81,7 @@ public class PlayerController : PhysicsObject
         else if (moveInput.x < -0.01f)
             spriteRenderer.flipX = false;
 
+        animator.SetBool("jump", Input.GetButtonDown("Jump"));
         animator.SetBool("grounded", grounded);
         animator.SetBool("moveInputX", (Input.GetButton("Horizontal")));
 
