@@ -26,10 +26,7 @@ public class FallingPlatformSpawn : MonoBehaviour
     
     void Start()
     {
-        MyPrefab.GetComponent<FallingPlatform>().TimeBeforeFall = TimeBeforeFall;
-        MyPrefab.GetComponent<FallingPlatform>().DestroyTime = DestroyTime;
-        MyPrefab.GetComponent<FallingPlatform>().Spawner = gameObject;
-        MyPrefab.GetComponent<SpriteRenderer>().sprite = sprite;
+        
         if (SpawnPlatformFromStart)
             SpawnPlatform();
     }
@@ -45,7 +42,11 @@ public class FallingPlatformSpawn : MonoBehaviour
 
     private void SpawnPlatform()
     {
-        Instantiate(MyPrefab,gameObject.transform.position,gameObject.transform.rotation);
+        MyPrefab.GetComponent<FallingPlatform>().TimeBeforeFall = TimeBeforeFall;
+        MyPrefab.GetComponent<FallingPlatform>().DestroyTime = DestroyTime;
+        MyPrefab.GetComponent<FallingPlatform>().Spawner = gameObject;
+        MyPrefab.GetComponent<SpriteRenderer>().sprite = sprite;
+        Instantiate(MyPrefab,gameObject.transform.position,gameObject.transform.rotation, gameObject.transform);
         IsPlatformAlive = true;
     }
 
