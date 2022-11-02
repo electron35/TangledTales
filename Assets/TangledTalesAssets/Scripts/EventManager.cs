@@ -7,8 +7,9 @@ public class EventManager : MonoBehaviour
         public delegate void FictionalMode();
         public static event FictionalMode onModeSwitch;
 
+        public bool currentFictionalMode;
+
         private GameController gameController = null;
-        private bool currentFictionalMode;
 
         void Start()
         {

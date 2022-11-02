@@ -18,6 +18,7 @@ public class PlayerController : PhysicsObject
 
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     public GameController gameController = null;
 
@@ -29,6 +30,7 @@ public class PlayerController : PhysicsObject
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -75,10 +77,12 @@ public class PlayerController : PhysicsObject
         }
 
         if (moveInput.x > 0.01f)
-            spriteRenderer.flipX = false;
-        else if (moveInput.x < -0.01f)
             spriteRenderer.flipX = true;
+        else if (moveInput.x < -0.01f)
+            spriteRenderer.flipX = false;
 
+        animator.SetBool("grounded", grounded);
+        animator.SetBool("moveInputX", (Input.GetButton("Horizontal")));
 
         if (isClimbing)
         {
@@ -93,6 +97,8 @@ public class PlayerController : PhysicsObject
         UnityEngine.Debug.Log("IsClimbing=" + isClimbing);
 
 
+       
+        
         targetVelocity = moveInput * maxSpeed;
     }
 
