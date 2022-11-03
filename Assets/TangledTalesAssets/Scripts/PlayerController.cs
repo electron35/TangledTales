@@ -54,7 +54,6 @@ public class PlayerController : PhysicsObject
         {
             isClimbing = true;
         }
-        UnityEngine.Debug.Log("Enter");
         ComputeVelocity();
     }
 
@@ -95,7 +94,6 @@ public class PlayerController : PhysicsObject
             gravityModifier = 1f;
         }
 
-        UnityEngine.Debug.Log("IsClimbing=" + isClimbing);
 
 
        
@@ -106,7 +104,6 @@ public class PlayerController : PhysicsObject
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        UnityEngine.Debug.Log("Enter");
         if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
