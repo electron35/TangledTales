@@ -67,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -217,7 +217,7 @@ TextureImporter:
         height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 3, w: 5}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -232,9 +232,9 @@ TextureImporter:
       name: grass_5
       rect:
         serializedVersion: 2
-        x: 1685
+        x: 1691
         y: 347
-        width: 84
+        width: 78
         height: 105
       alignment: 7
       pivot: {x: 0.5, y: 0}
