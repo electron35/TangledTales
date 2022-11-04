@@ -12,15 +12,20 @@ public class FallingPlatform : PhysicsObject
     public GameObject Spawner = null;
     
     private bool isFalling = false;
+
+
+    private float platformHeight;
     // Start is called before the first frame update
     void Start()
     {
+        platformHeight = gameObject.GetComponent<SpriteRenderer>().size.y;
         gravityModifier = 0.0f;
     }  
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.transform.position.y > gameObject.transform.position.y) // Je detecte si la collision vient du dessus en comparant les Y des deux
+
+        if (collision.gameObject.transform.position.y > gameObject.transform.position.y + platformHeight/2) // Je detecte si la collision vient du dessus en comparant les Y des deux
         {
             if (!isFalling)
             {
@@ -34,10 +39,9 @@ public class FallingPlatform : PhysicsObject
 
     IEnumerator Falling()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(147,147,147,255);
         yield return new WaitForSecondsRealtime(TimeBeforeFall);
 
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 25, 50);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 50);
         gravityModifier = 1.5f;
 
         Destroy(gameObject.GetComponent<BoxCollider2D>());
