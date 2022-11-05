@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814106930321770075}
   - component: {fileID: 814106930321770074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlatformR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 814106930956292476}
   - component: {fileID: 814106930956292478}
   - component: {fileID: 814106930956292479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plateforme_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 814106930984190573}
   - component: {fileID: 814106930984190575}
   - component: {fileID: 814106930984190572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plateforme_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 814106931019993426}
   - component: {fileID: 814106931019993436}
   - component: {fileID: 814106931019993437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plateforme_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
