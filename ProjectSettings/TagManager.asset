@@ -55,11 +55,11 @@ TagManager:
   - name: Front Trees
     uniqueID: 3969397665
     locked: 0
-  - name: Fictional
-    uniqueID: 2378426669
-    locked: 0
   - name: Real
     uniqueID: 3231358461
+    locked: 0
+  - name: Fictional
+    uniqueID: 2378426669
     locked: 0
   - name: Player
     uniqueID: 3326598559
