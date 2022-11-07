@@ -14,9 +14,9 @@ TagManager:
   - Water
   - UI
   - Editor
-  - 
-  - 
-  - 
+  - Fictional
+  - Real
+  - Fiction and Real
   - 
   - 
   - 
@@ -42,6 +42,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 549958863
+    locked: 0
+  - name: Far Trees
+    uniqueID: 1942378655
+    locked: 0
+  - name: Mid Trees
+    uniqueID: 2711851193
+    locked: 0
+  - name: Front Trees
+    uniqueID: 3969397665
     locked: 0
   - name: Real
     uniqueID: 3231358461
