@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-        public bool fictionalMode = false;
-
-        void Start()
-        {
-                
-        }
-
-        void Update()
-        {
-                
-        }
+    public bool fictionalMode = false;
+    
 }

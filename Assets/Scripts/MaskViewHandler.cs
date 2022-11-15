@@ -8,14 +8,18 @@ public class MaskViewHandler : MonoBehaviour
     public EventManager eventManager;
     public Canvas canvas;
 
+    private int circleRadius = 750;
+
     void OnEnable()
     {
-        EventManager.onModeSwitch += ChangeSize;
+        EventManager.onModeSwitch += SwitchMode;
+        EventManager.circleRadiusChanged += ChangeRadius;
     }
 
     void OnDisable()
     {
-        EventManager.onModeSwitch -= ChangeSize;
+        EventManager.onModeSwitch -= SwitchMode;
+        EventManager.circleRadiusChanged -= ChangeRadius;
     }
 
     void Start()
@@ -29,10 +33,14 @@ public class MaskViewHandler : MonoBehaviour
     {
     }
 
-    private void ChangeSize()
+    private void SwitchMode()
     {
-        Debug.Log("In fictional Mode : " + eventManager.currentFictionalMode);
-        //this.transform.localScale = new Vector3(0, 0, 0);
-        rectTransform.sizeDelta = eventManager.currentFictionalMode ? new Vector2(600, 600) : new Vector2(0, 0);
+        rectTransform.sizeDelta = eventManager.currentFictionalMode ? new Vector2(circleRadius, circleRadius) : new Vector2(0, 0);
+    }
+
+    private void ChangeRadius(int newRadius)
+    {
+        circleRadius = newRadius;
+        rectTransform.sizeDelta = new Vector2(circleRadius, circleRadius);
     }
 }
