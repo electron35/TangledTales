@@ -16,6 +16,9 @@ public class PlayerController : PhysicsObject
     [Range(0, 1)]
     public float takeOffDragSpeed = .5f;
 
+    [Range(50, 1080)]
+    public int circleRadius = 750;
+
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
     private Animator animator;

@@ -4,29 +4,47 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-        public delegate void FictionalMode();
-        public static event FictionalMode onModeSwitch;
+    // Event whenever we change world mode
+    public delegate void FictionalMode();
+    public static event FictionalMode onModeSwitch;
 
-        public bool currentFictionalMode;
+    // Event sent whenever we change the radius of the fictional circle view
+    public delegate void CircleRadius(int newRadius);
+    public static event CircleRadius circleRadiusChanged;
 
-        private GameController gameController = null;
+    public bool currentFictionalMode;
+    public int currentCircleRadius;
 
-        void Start()
+    private GameController gameController = null;
+    private PlayerController playerController = null;
+
+    void Start()
+    {
+        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+
+        currentFictionalMode = gameController.fictionalMode;
+        currentCircleRadius = playerController.circleRadius;
+    }
+
+    void Update()
+    {
+        if (currentFictionalMode != gameController.fictionalMode)
         {
-                gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
-
-                currentFictionalMode = gameController.fictionalMode;
+            if (onModeSwitch != null)
+            {
+                onModeSwitch();
+            }
+            currentFictionalMode = gameController.fictionalMode;
         }
 
-        void Update()
+        if (currentCircleRadius != playerController.circleRadius)
         {
-                if (currentFictionalMode != gameController.fictionalMode)
-                {
-                        if (onModeSwitch != null)
-                        {
-                                onModeSwitch();
-                        }
-                        currentFictionalMode = gameController.fictionalMode;
-                }
+            if (circleRadiusChanged != null)
+            {
+                currentCircleRadius = playerController.circleRadius;
+                circleRadiusChanged(currentCircleRadius);
+            }
         }
+    }
 }
