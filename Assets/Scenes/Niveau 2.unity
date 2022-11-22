@@ -1517,6 +1517,16 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3672008941196457063, guid: 24671aca22a2e5e4dabd0fa509c326e3,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672008941196457063, guid: 24671aca22a2e5e4dabd0fa509c326e3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3672008942050625624, guid: 24671aca22a2e5e4dabd0fa509c326e3,
         type: 3}
       propertyPath: m_RootOrder
@@ -1525,12 +1535,12 @@ PrefabInstance:
     - target: {fileID: 3672008942050625624, guid: 24671aca22a2e5e4dabd0fa509c326e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0005874634
+      value: 1.2434335
       objectReference: {fileID: 0}
     - target: {fileID: 3672008942050625624, guid: 24671aca22a2e5e4dabd0fa509c326e3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4674244
+      value: 0.52634096
       objectReference: {fileID: 0}
     - target: {fileID: 3672008942050625624, guid: 24671aca22a2e5e4dabd0fa509c326e3,
         type: 3}
@@ -8869,6 +8879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentFictionalMode: 0
+  currentCircleRadius: 0
 --- !u!4 &606871289
 Transform:
   m_ObjectHideFlags: 0
@@ -10362,6 +10373,7 @@ GameObject:
   - component: {fileID: 1484775560}
   - component: {fileID: 1484775559}
   - component: {fileID: 1484775561}
+  - component: {fileID: 1484775562}
   m_Layer: 7
   m_Name: Fictional TileMap
   m_TagString: Untagged
@@ -16998,7 +17010,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484775557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -17007,6 +17019,20 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &1484775562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484775557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436a1bfbce07bfe4d99874319ce6edc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 1484775561}
 --- !u!1001 &1497460802
 PrefabInstance:
   m_ObjectHideFlags: 0

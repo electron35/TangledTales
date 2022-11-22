@@ -13,6 +13,7 @@ public class FallingPlatform : PhysicsObject
     
     private bool isFalling = false;
 
+    public bool isFictionnal = false;
 
     private float platformHeight;
     // Start is called before the first frame update

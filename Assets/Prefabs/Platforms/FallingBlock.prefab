@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1222442653333080568}
   m_Layer: 7
   m_Name: FallingBlock
-  m_TagString: Untagged
+  m_TagString: TileMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,3 +149,4 @@ MonoBehaviour:
   TimeBeforeFall: 5
   DestroyTime: 0.5
   Spawner: {fileID: 0}
+  isFictionnal: 0

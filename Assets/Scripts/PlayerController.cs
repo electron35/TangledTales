@@ -18,10 +18,12 @@ public class PlayerController : PhysicsObject
 
     [Range(50, 1080)]
     public int circleRadius = 750;
+    public bool fictionalMode = false;
 
     private Vector2 moveInput;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private Collider2D playerCollider;
 
     public GameController gameController = null;
 
@@ -30,10 +32,13 @@ public class PlayerController : PhysicsObject
     bool isLadder = false;
     bool isClimbing = false;
 
+    [SerializeField]
+    public bool CanSwap = true;
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerCollider = GetComponent<Collider2D>();
     }
 
     // Start is called before the first frame update
@@ -48,7 +53,14 @@ public class PlayerController : PhysicsObject
 
         if (Input.GetKeyDown("e"))
         {
-            gameController.fictionalMode = !gameController.fictionalMode;
+            if (CanSwap)
+            {
+                gameController.fictionalMode = !gameController.fictionalMode;
+            }
+            else
+            {
+                UnityEngine.Debug.Log("NANNANANANNANNAN");
+            }
         }
 
         targetVelocity = Vector2.zero;

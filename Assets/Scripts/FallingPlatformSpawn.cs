@@ -19,7 +19,8 @@ public class FallingPlatformSpawn : MonoBehaviour
     public float TimeBeforeFall = 5.0f;
     [Range(0.1f, 10)]
     public float DestroyTime = 0.5f;
-
+    [SerializeField]
+    public bool IsFictionnal = true;
     
 
     public bool IsPlatformAlive;

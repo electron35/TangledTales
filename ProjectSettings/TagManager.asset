@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TutorialRequirement
   - Ladder
+  - TileMap
   layers:
   - Default
   - TransparentFX
