@@ -17,6 +17,19 @@ public class ColliderTriggerSwapper : MonoBehaviour
 
     void InverseTriggerState()
     {
-        colliderToSwap.isTrigger = !colliderToSwap.isTrigger;
+        if (gameObject.TryGetComponent(out IsLadder ladder))
+        {
+
+            ladder.LadderActive = !ladder.LadderActive;
+            ladder.GetComponentInParent<BoxCollider2D>().enabled = ladder.LadderActive;
+            ladder.pcEject();
+
+        }
+        else
+        {
+            colliderToSwap.isTrigger = !colliderToSwap.isTrigger;
+        }
+        
+        
     }
 }

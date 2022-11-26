@@ -107,31 +107,40 @@ public class PlayerController : PhysicsObject
         else
         {
             gravityModifier = 1f;
-        }
-
-
-
-       
-        
+        }        
         targetVelocity = moveInput * maxSpeed;
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ladder"))
+        if (collision.TryGetComponent(out IsLadder ladder))
         {
-            isLadder = true;
+            if (ladder.LadderActive)
+            {
+                ladder.pc = this;
+                isLadder = true;
+            }
+
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ladder"))
+        if (collision.TryGetComponent(out IsLadder ladder))
         {
-            isLadder = false;
-            isClimbing = false;
+            if (ladder.LadderActive)
+            {
+                stopClimb();
+            }
+                
         }
+    }
+
+    public void stopClimb()
+    {
+        isLadder = false;
+        isClimbing = false;
     }
 
     public enum JumpState
