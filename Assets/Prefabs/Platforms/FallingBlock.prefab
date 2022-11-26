@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1222442653333080574}
   - component: {fileID: 1222442653333080569}
   - component: {fileID: 1222442653333080568}
+  - component: {fileID: 7724488354814324570}
+  - component: {fileID: 1516451271703905085}
   m_Layer: 7
   m_Name: FallingBlock
   m_TagString: TileMap
@@ -149,4 +151,31 @@ MonoBehaviour:
   TimeBeforeFall: 5
   DestroyTime: 0.5
   Spawner: {fileID: 0}
-  isFictionnal: 0
+  WorldVisibility: 0
+--- !u!114 &7724488354814324570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222442653333080571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac581fd86c8c7d4ab96fdb5fd32e108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderToSwap: {fileID: 1222442653333080569}
+--- !u!114 &1516451271703905085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222442653333080571}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436a1bfbce07bfe4d99874319ce6edc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 1222442653333080569}
