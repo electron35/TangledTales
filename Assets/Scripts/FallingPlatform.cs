@@ -13,13 +13,30 @@ public class FallingPlatform : PhysicsObject
     
     private bool isFalling = false;
 
+    public CurrentWorld WorldVisibility = CurrentWorld.both;
+    private GameController gameController = null;
 
     private float platformHeight;
     // Start is called before the first frame update
     void Start()
     {
+        gameController = GameObject.Find("Game Controller").GetComponent<GameController>();
         platformHeight = gameObject.GetComponent<SpriteRenderer>().size.y;
         gravityModifier = 0.0f;
+        switch (WorldVisibility){
+            case CurrentWorld.both:
+                gameObject.layer = LayerMask.NameToLayer("Fiction and Real");
+                gameObject.GetComponent<ColliderTriggerSwapper>().enabled = false;
+                break;
+            case CurrentWorld.fict:
+                gameObject.layer = LayerMask.NameToLayer("Fiction");
+                gameObject.GetComponent<BoxCollider2D>().isTrigger = !gameController.fictionalMode;
+                break;
+            case CurrentWorld.real:
+                gameObject.layer = LayerMask.NameToLayer("Real");
+                gameObject.GetComponent<BoxCollider2D>().isTrigger = gameController.fictionalMode;
+                break;
+        }
     }  
 
     void OnCollisionEnter2D(Collision2D collision)
