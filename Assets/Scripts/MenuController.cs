@@ -20,4 +20,9 @@ public class MenuController : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Niveau 2");
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
