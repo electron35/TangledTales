@@ -62,6 +62,12 @@ TagManager:
   - name: Fictional
     uniqueID: 2378426669
     locked: 0
+  - name: Fictional and Real
+    uniqueID: 1528945613
+    locked: 0
   - name: Player
     uniqueID: 3326598559
+    locked: 0
+  - name: Editor
+    uniqueID: 3128061141
     locked: 0
