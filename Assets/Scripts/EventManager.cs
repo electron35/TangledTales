@@ -29,6 +29,7 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
+        // Checking for world mode change
         if (currentFictionalMode != gameController.fictionalMode)
         {
             if (onModeSwitch != null)
@@ -38,6 +39,7 @@ public class EventManager : MonoBehaviour
             currentFictionalMode = gameController.fictionalMode;
         }
 
+        // Checking for circle radius change
         if (currentCircleRadius != playerController.circleRadius)
         {
             if (circleRadiusChanged != null)

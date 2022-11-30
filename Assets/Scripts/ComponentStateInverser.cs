@@ -11,6 +11,7 @@ using UnityEngine;
 public class ComponentStateInverser : MonoBehaviour
 {
     public List<Behaviour> components = new List<Behaviour>();
+
     void OnEnable()
     {
         EventManager.onModeSwitch += InverseComponentState;
