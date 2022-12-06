@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 0.28773582, g: 0.40368587, b: 1, a: 1}
   m_Intensity: 2.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 2de9c38d
+  m_ApplyToSortingLayers: fd9d9ac02de9c38dcddb215b
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -147,7 +147,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -968368737
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f2008a8fedc663e4bbb79f93d1d2586d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 285391934347161695}
   - component: {fileID: 4089208881876478463}
   - component: {fileID: 6945039781558959253}
+  - component: {fileID: 1645466365}
   m_Layer: 0
   m_Name: SwapCheck
   m_TagString: Untagged
@@ -337,3 +338,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.040764134, y: 0.0073851156}
   m_Size: {x: 1.0815284, y: 1.2806308}
   m_Direction: 0
+--- !u!114 &1645466365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196487584953360086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9341c9b7760c1e64bbc34bce9afe8ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

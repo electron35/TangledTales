@@ -81,6 +81,7 @@ public class PlayerController : PhysicsObject
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
+            gameObject.transform.SetParent(null);
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -91,9 +92,15 @@ public class PlayerController : PhysicsObject
         }
 
         if (moveInput.x > 0.01f)
+        {
             spriteRenderer.flipX = true;
+            gameObject.transform.SetParent(null);
+        }
         else if (moveInput.x < -0.01f)
+        {
             spriteRenderer.flipX = false;
+            gameObject.transform.SetParent(null);
+        }
 
         animator.SetBool("jump", Input.GetButtonDown("Jump"));
         animator.SetBool("grounded", grounded);
