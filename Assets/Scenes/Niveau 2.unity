@@ -1637,7 +1637,7 @@ Transform:
   - {fileID: 405793594}
   - {fileID: 1596886193}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280310724
 GameObject:
@@ -8646,7 +8646,7 @@ PrefabInstance:
     - target: {fileID: 1052058808675349403, guid: 16e022c67e21c224189a52ab4c00cc23,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1052058808675349403, guid: 16e022c67e21c224189a52ab4c00cc23,
         type: 3}
@@ -8671,17 +8671,17 @@ PrefabInstance:
     - target: {fileID: 1052058808675349403, guid: 16e022c67e21c224189a52ab4c00cc23,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1052058808675349403, guid: 16e022c67e21c224189a52ab4c00cc23,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1052058808675349403, guid: 16e022c67e21c224189a52ab4c00cc23,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1052058808675349403, guid: 16e022c67e21c224189a52ab4c00cc23,
         type: 3}
@@ -16923,7 +16923,7 @@ PrefabInstance:
     - target: {fileID: 6084601201446192357, guid: 991faa54e87c27f4085bea752f779cb5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6084601201446192357, guid: 991faa54e87c27f4085bea752f779cb5,
         type: 3}
@@ -17517,6 +17517,11 @@ PrefabInstance:
       propertyPath: objectToFollow
       value: 
       objectReference: {fileID: 890135113}
+    - target: {fileID: 2079715368781672586, guid: 0ecf1d103d5e5474baa28b0768b0c515,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3326254356485424015, guid: 0ecf1d103d5e5474baa28b0768b0c515,
         type: 3}
       propertyPath: m_Name
@@ -17525,7 +17530,7 @@ PrefabInstance:
     - target: {fileID: 3326254356485424048, guid: 0ecf1d103d5e5474baa28b0768b0c515,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3326254356485424048, guid: 0ecf1d103d5e5474baa28b0768b0c515,
         type: 3}
@@ -17582,6 +17587,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 890135119}
+    - target: {fileID: 3326254357128985388, guid: 0ecf1d103d5e5474baa28b0768b0c515,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.52634096
+      objectReference: {fileID: 0}
     - target: {fileID: 4079656616672474878, guid: 0ecf1d103d5e5474baa28b0768b0c515,
         type: 3}
       propertyPath: objectToFollow
@@ -17596,11 +17606,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1764125107}
     m_Modifications:
-    - target: {fileID: 1378516191344378382, guid: 6ecf0e33f4b15404abb304f213eb05e4,
-        type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7263206651649825255, guid: 6ecf0e33f4b15404abb304f213eb05e4,
         type: 3}
       propertyPath: m_Name
@@ -17614,7 +17619,7 @@ PrefabInstance:
     - target: {fileID: 9066158803096352654, guid: 6ecf0e33f4b15404abb304f213eb05e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 9066158803096352654, guid: 6ecf0e33f4b15404abb304f213eb05e4,
         type: 3}
@@ -17670,6 +17675,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5403993304298712771, guid: 7f5174f0a8555ac41b9638c6ac7cc2fd,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5403993304298712771, guid: 7f5174f0a8555ac41b9638c6ac7cc2fd,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size

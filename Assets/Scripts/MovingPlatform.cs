@@ -8,6 +8,8 @@ public class MovingPlatform : MonoBehaviour
     public int startingPointIndex;
     public Transform[] points;
 
+    private Vector2 positionBefore;
+    private Vector2 positionAfter;
     private int i;
     void Start()
     {
@@ -26,6 +28,28 @@ public class MovingPlatform : MonoBehaviour
             }
         }
 
+        positionBefore = transform.position;
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+        positionAfter = transform.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.position.y > transform.position.y)
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.transform.position.y > transform.position.y)
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null);
     }
 }
