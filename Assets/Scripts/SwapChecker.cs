@@ -9,14 +9,14 @@ public class SwapChecker : MonoBehaviour
     {
         if (collision.CompareTag("TileMap"))
         {
-            gameObject.GetComponent<PlayerController>().CanSwap = false;
+            gameObject.GetComponentInParent<PlayerController>().CanSwap = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("TileMap"))
         {
-            gameObject.GetComponent<PlayerController>().CanSwap = true;
+            gameObject.GetComponentInParent<PlayerController>().CanSwap = true;
         }
     }
 }
