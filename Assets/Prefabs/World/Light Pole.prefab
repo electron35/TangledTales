@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7032216380668947079}
   - component: {fileID: 7032216380668947072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.61711216, b: 0, a: 1}
   m_Intensity: 1.5
   m_LightVolumeOpacity: 0.223
-  m_ApplyToSortingLayers: 00000000a13398ecfd9d9ac02de9c38dcddb215b9fdd47c6d56c72ba
+  m_ApplyToSortingLayers: 00000000a13398ecfd9d9ac02de9c38dcddb215b9fdd47c6d56c72ba21eed04b
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7032216381386926928}
   - component: {fileID: 7032216381386926935}
   - component: {fileID: 7032216381386926929}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1166906155
+  m_SortingLayerID: 1271983649
   m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3c5e224c878df2e46a46bf5dc812c22b, type: 3}
@@ -173,6 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c323cfee064584aa21df9ece812739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  on: 0
+  on: 1
   lampOnSprite: {fileID: 21300000, guid: 3c5e224c878df2e46a46bf5dc812c22b, type: 3}
   lampOffSprite: {fileID: 21300000, guid: 3c5e224c878df2e46a46bf5dc812c22b, type: 3}
