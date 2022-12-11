@@ -5,7 +5,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     // Event whenever we change world mode
-    public delegate void FictionalMode();
+    public delegate void FictionalMode(int currentRadius);
     public static event FictionalMode onModeSwitch;
 
     // Event sent whenever we change the radius of the fictional circle view
@@ -15,8 +15,8 @@ public class EventManager : MonoBehaviour
     public bool currentFictionalMode;
     public int currentCircleRadius;
 
-    private GameController gameController = null;
-    private PlayerController playerController = null;
+    public GameController gameController = null;
+    public PlayerController playerController = null;
 
     void Start()
     {
@@ -34,7 +34,7 @@ public class EventManager : MonoBehaviour
         {
             if (onModeSwitch != null)
             {
-                onModeSwitch();
+                onModeSwitch(currentCircleRadius);
             }
             currentFictionalMode = gameController.fictionalMode;
         }

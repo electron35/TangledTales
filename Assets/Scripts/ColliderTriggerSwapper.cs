@@ -15,7 +15,7 @@ public class ColliderTriggerSwapper : MonoBehaviour
         EventManager.onModeSwitch -= InverseTriggerState;
     }
 
-    void InverseTriggerState()
+    void InverseTriggerState(int currentCircleRadius)
     {
         if (gameObject.TryGetComponent(out IsLadder ladder))
         {

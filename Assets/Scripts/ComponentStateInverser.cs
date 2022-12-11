@@ -22,7 +22,7 @@ public class ComponentStateInverser : MonoBehaviour
         EventManager.onModeSwitch -= InverseComponentState;
     }
 
-    void InverseComponentState()
+    void InverseComponentState(int currentCircleRadius)
     {
         foreach (Behaviour component in components)
         {

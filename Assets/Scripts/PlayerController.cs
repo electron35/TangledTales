@@ -16,7 +16,7 @@ public class PlayerController : PhysicsObject
     public float takeOffDragSpeed = .5f;
 
     [Range(50, 1080)]
-    public int circleRadius = 750;
+    public int circleRadius = 900;
     public bool fictionalMode = false;
 
     private Vector2 moveInput;

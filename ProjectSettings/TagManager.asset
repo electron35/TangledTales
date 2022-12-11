@@ -57,6 +57,9 @@ TagManager:
   - name: Front Trees
     uniqueID: 3969397665
     locked: 0
+  - name: Background
+    uniqueID: 1262859895
+    locked: 0
   - name: Real
     uniqueID: 3231358461
     locked: 0

@@ -24,7 +24,7 @@ public class ColorSwitch : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
     }
 
-    void SwitchColor()
+    void SwitchColor(int currentCircleRadius)
     {
         colorSwitched = !colorSwitched;
         collider.enabled = !colorSwitched;
