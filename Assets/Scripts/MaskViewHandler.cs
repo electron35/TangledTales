@@ -33,8 +33,9 @@ public class MaskViewHandler : MonoBehaviour
     {
     }
 
-    private void SwitchMode()
+    private void SwitchMode(int currentRadius)
     {
+        circleRadius = currentRadius;
         rectTransform.sizeDelta = eventManager.currentFictionalMode ? new Vector2(0, 0) : new Vector2(circleRadius, circleRadius);
     }
 

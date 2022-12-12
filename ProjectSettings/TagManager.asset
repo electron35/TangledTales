@@ -57,6 +57,9 @@ TagManager:
   - name: Front Trees
     uniqueID: 3969397665
     locked: 0
+  - name: Background
+    uniqueID: 1262859895
+    locked: 0
   - name: Real
     uniqueID: 3231358461
     locked: 0
@@ -68,6 +71,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3326598559
+    locked: 0
+  - name: Foreground
+    uniqueID: 1271983649
     locked: 0
   - name: Editor
     uniqueID: 3128061141

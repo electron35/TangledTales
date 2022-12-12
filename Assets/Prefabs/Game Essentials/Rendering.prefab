@@ -44,6 +44,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Light 2D
       objectReference: {fileID: 0}
+    - target: {fileID: 1820716185299127421, guid: 5be3263f960f6e945baa2c8d8760ebbc,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820716185299127421, guid: 5be3263f960f6e945baa2c8d8760ebbc,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820716185299127421, guid: 5be3263f960f6e945baa2c8d8760ebbc,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[8]
+      value: 1528945613
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820716185299127421, guid: 5be3263f960f6e945baa2c8d8760ebbc,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[9]
+      value: 1271983649
+      objectReference: {fileID: 0}
     - target: {fileID: 5216168366689467709, guid: 5be3263f960f6e945baa2c8d8760ebbc,
         type: 3}
       propertyPath: m_RootOrder

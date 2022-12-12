@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-//using System.Diagnostics;
 using UnityEngine;
 
 
@@ -17,7 +16,7 @@ public class PlayerController : PhysicsObject
     public float takeOffDragSpeed = .5f;
 
     [Range(50, 1080)]
-    public int circleRadius = 750;
+    public int circleRadius = 900;
     public bool fictionalMode = false;
 
     private Vector2 moveInput;
@@ -81,7 +80,7 @@ public class PlayerController : PhysicsObject
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
-            gameObject.transform.SetParent(null);
+            transform.SetParent(null);
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -94,12 +93,12 @@ public class PlayerController : PhysicsObject
         if (moveInput.x > 0.01f)
         {
             spriteRenderer.flipX = true;
-            gameObject.transform.SetParent(null);
+            transform.SetParent(null);
         }
         else if (moveInput.x < -0.01f)
         {
             spriteRenderer.flipX = false;
-            gameObject.transform.SetParent(null);
+            transform.SetParent(null);
         }
 
         animator.SetBool("jump", Input.GetButtonDown("Jump"));
@@ -117,7 +116,6 @@ public class PlayerController : PhysicsObject
         }        
         targetVelocity = moveInput * maxSpeed;
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
