@@ -18,7 +18,7 @@ public class MenuController : MonoBehaviour
 
     public void LaunchGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Niveau 2");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Niveau_3");
     }
 
     public void Exit()
