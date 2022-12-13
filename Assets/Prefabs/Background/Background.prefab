@@ -180,7 +180,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1063608835
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -405,7 +405,12 @@ PrefabInstance:
     - target: {fileID: 1208355376923654319, guid: 1a568e7a5e40424429f041b74f56099f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888162315999117402, guid: 1a568e7a5e40424429f041b74f56099f,
+        type: 3}
+      propertyPath: movementScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2536625745661734657, guid: 1a568e7a5e40424429f041b74f56099f,
         type: 3}
@@ -465,14 +470,35 @@ PrefabInstance:
     - target: {fileID: 4830475073168582581, guid: 1a568e7a5e40424429f041b74f56099f,
         type: 3}
       propertyPath: m_Name
-      value: Sky Picture
+      value: Sky Gradient
       objectReference: {fileID: 0}
     - target: {fileID: 4830475073168582581, guid: 1a568e7a5e40424429f041b74f56099f,
         type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4830475073168582586, guid: 1a568e7a5e40424429f041b74f56099f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830475073168582586, guid: 1a568e7a5e40424429f041b74f56099f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830475073168582587, guid: 1a568e7a5e40424429f041b74f56099f,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830475073168582587, guid: 1a568e7a5e40424429f041b74f56099f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 1a568e7a5e40424429f041b74f56099f, type: 3}
 --- !u!4 &7834821006030989543 stripped
 Transform:
@@ -487,10 +513,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 900804452615337655}
     m_Modifications:
+    - target: {fileID: 90995416216464292, guid: a5a21cb915cc80b478d9ae070530e60d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 877070593749251034, guid: a5a21cb915cc80b478d9ae070530e60d,
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833944167338655597, guid: a5a21cb915cc80b478d9ae070530e60d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358882182857977895, guid: a5a21cb915cc80b478d9ae070530e60d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7608693538857327679, guid: a5a21cb915cc80b478d9ae070530e60d,
         type: 3}
